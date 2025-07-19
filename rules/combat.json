@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://localhost:3000"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://api.example.com/*",
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://localhost:8080"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://app.example.com/*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "http://localhost:9000\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "https://cdn\\.example\\.com(.*)",
+      "resourceTypes": ["image", "stylesheet", "script"]
+    }
+  }
+]

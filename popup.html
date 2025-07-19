@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back 2 Basics</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Back 2 Basics</h1>
+            <h2>by: heythereu</h2>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-text" id="statusText">No textures active</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="rule-options">
+                <h2>Select Texture Pack</h2>
+                
+                <div class="option-group">
+                    <label class="option-card" for="none">
+                        <input type="radio" id="none" name="ruleSet" value="none" checked>
+                        <div class="option-content">
+                            <div class="option-title">None</div>
+                            <div class="option-description">Default Miniblox Textures</div>
+                        </div>
+                        <div class="option-indicator"></div>
+                    </label>
+
+                    <label class="option-card" for="minecraft">
+                        <input type="radio" id="minecraft" name="ruleSet" value="minecraft">
+                        <div class="option-content">
+                            <div class="option-title">Minecraft</div>
+                            <div class="option-description">Modern Minecraft Textures</div>
+                        </div>
+                        <div class="option-indicator"></div>
+                    </label>
+
+                    <label class="option-card" for="vanilla">
+                        <input type="radio" id="vanilla" name="ruleSet" value="vanilla">
+                        <div class="option-content">
+                            <div class="option-title">Vanilla+</div>
+                            <div class="option-description">New Look for Miniblox (WIP)</div>
+                        </div>
+                        <div class="option-indicator"></div>
+                    </label>
+
+                    <label class="option-card" for="combat">
+                        <input type="radio" id="combat" name="ruleSet" value="combat">
+                        <div class="option-content">
+                            <div class="option-title">Combat</div>
+                            <div class="option-description">Smooth Textures for PvP</div>
+                        </div>
+                        <div class="option-indicator"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="applyButton" class="apply-button" disabled>
+                    <span class="button-text">Apply Changes</span>
+                    <div class="button-loader" id="buttonLoader"></div>
+                </button>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <div class="error-icon">⚠</div>
+                <div class="error-text" id="errorText"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

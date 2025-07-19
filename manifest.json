@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Back 2 Basics",
+  "version": "2.0",
+  "description": "A browser extension to intercept HTTPS requests for Miniblox",
+  "author": "heythereu",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://miniblox.io/*",
+    "https://miniblox.online/*",
+    "https://miniblox.org/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Back 2 Basics",
+    "default_icon": { "128": "icons/icon128.png" }
+  },
+  "icons": { "128": "icons/icon128.png" },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "minecraft_textures", "enabled": false, "path": "rules/minecraft.json" },
+      { "id": "vanilla_textures",   "enabled": false, "path": "rules/vanilla.json"   },
+      { "id": "combat_textures",    "enabled": false, "path": "rules/combat.json"    }
+    ]
+  }
+}
